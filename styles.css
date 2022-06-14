@@ -2,7 +2,86 @@
     font-family: myFirstFont;
     src: url(Aurebesh.ttf);
   }
-  
   body{
-    font-family: myFirstFont;
+    background-image: url(hyper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  
   }
+  main{
+    display: flex;
+    padding: 4%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main input{
+    border-radius: 4px;
+    width: 50%;
+    padding: 1%;
+  }
+
+  main canvas{
+    width:50%;
+     height:50%;
+     padding: 2%;
+     border-radius: 4px;
+   
+  }
+
+ #btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #d11f1f;
+    padding: 20px 70px;
+    font-size: 20px;   
+     margin: 1%;
+     padding: 1%;
+     border-style: ridge;
+     border-color: red;
+  }
+
+  .buttonsContainer{
+    padding-top: 1%;
+    padding-bottom: 1%;
+  
+    display: flex;    
+  }
+
+  .buttonsContainer button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #d11f1f;
+    padding: 20px 70px;
+    font-size: 20px;   
+     margin: 1%;
+     padding: 1%;
+     border-style: ridge;
+     border-color: red;
+  }
+  
+
+  main article{
+    background-color: white;
+    width:50%;
+    height:50%;    
+    border-radius: 4px;
+  }
+  
+  p{
+    text-align: center;
+padding: 1%;
+  }
+
+
+  
+ canvas{
+   background-color: black;
+ }
+ 
+ #aurebeshOutput{
+   font-family: 'myFirstFont';
+ }

@@ -6,10 +6,11 @@ const ctx = canvas.getContext("2d");
 ctx.fillStyle = "blue";
 
 
-
+var aurebeshOutput=document.getElementById("aurebeshOutput");
 
 var btn = document.getElementById('btn');
 var download = document.getElementById('download');
+var reset=document.getElementById('reset');
 var input = document.getElementById('input');
 console.log(input)
 
@@ -26,17 +27,26 @@ myFont.load().then(function (font) {
 
 });
 
-
+//display
 btn.addEventListener('click', function () {
-
-
     let userInput = input.value;
     console.log(userInput);
 
-    ctx.font = "50px myFont"; // set font
+
+    //print text
+    ctx.font = "20px myFont"; // set font
     ctx.shadowColor = 'rgb(240,248,255)';
     ctx.shadowBlur = 15;
-    ctx.fillText(userInput, 80, 80);
+    
+    //center text
+    const x = canvas.width / 2;
+    const y=canvas.height/2;
+    ctx.textAlign = 'center';
+    ctx.fillText(userInput, x, y);
+
+    //fill p
+    aurebeshOutput.textContent=userInput;
+   
 
 
     // const bck= new Image();
@@ -45,9 +55,16 @@ btn.addEventListener('click', function () {
 
     const dataURI = canvas.toDataURL("image/jpeg");
 
-    output.src = dataURI;
+    // output.src = dataURI;
 
 
+})
+
+//reset canvas
+reset.addEventListener('click', function(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    aurebeshOutput.textContent='';
+    input.value='';
 })
 
 download.addEventListener('click', function () {
