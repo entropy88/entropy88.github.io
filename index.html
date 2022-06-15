@@ -27,7 +27,9 @@
                 const div = document.getElementById('captureThis');
 
                 //fill div with input value
-                div.textContent=inputValue;
+                let p=document.createElement("p");
+                p.textContent=inputValue
+                div.appendChild(p);
 
                 //create and append canvas
                 const canvas = await html2canvas(div)

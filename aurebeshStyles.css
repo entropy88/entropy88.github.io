@@ -57,8 +57,9 @@ button{
 }
 
 .outputDiv{
-    width: 40%;
-    height: main/2;
+    width: 50%;
+    padding: 1%;
+    overflow-wrap: break-word;
     
     border-radius: 1%;
     text-align: center;
