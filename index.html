@@ -1,29 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"> </script>
+    <link rel="stylesheet" href="aurebeshStyles.css">
+  
+    <title>Aurebesh translator</title>
 </head>
+
 <body>
-
     <main>
-    <input id="input">
-    <button id="btn">display</button>      
-    <canvas id="myCanvas"></canvas>
-    <div class="buttonsContainer">
-    <button id="download">Download image</button>
-    <button id="reset">Reset</button>
-</div>
-    <img id="output">
-    <article>
-        <p id="aurebeshOutput"></p>
-    </article>
-</main>
-    
-</body>
-<script src="index.js"></script>
-</html>
+    <input id="userInput" placeholder="Insert your text here">
+  
 
+
+    <script type="text/javascript">
+        var dataURL='';
+
+        function captureThisFunc() {
+            (async () => {
+                //get input value
+                const inputValue=document.getElementById('userInput').value;
+                const div = document.getElementById('captureThis');
+
+                //fill div with input value
+                div.textContent=inputValue;
+
+                //create and append canvas
+                const canvas = await html2canvas(div)
+                // document.body.appendChild(canvas);
+                 dataURL = canvas.toDataURL("image/jpeg", 1.0);
+
+                 //make download btn visible
+                const downloadButton=document.getElementById('downloadBtn');
+                downloadButton.style.display="block";
+                const resetButton=document.getElementById('resetBtn');
+                resetButton.style.display="block";
+               
+
+            })()
+        }
+     
+
+    </script>
+      <button onclick="captureThisFunc()">Translate!</button>
+    <div id="captureThis" class="outputDiv"></div>  
+    <article class="controls">
+    <button id="downloadBtn" onclick="downloadImage(dataURL)" style="display:none">Download image</button>
+    <button id="resetBtn" onclick="reset();" style="display:none">Reset</button>
+</article>
+</main>
+</body>
+<script src="download.js"></script>
+
+</html>
