@@ -1,0 +1,67 @@
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(Starjedi.ttf);
+  }
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: myFirstFont;
+}
+
+
+
+#masterName{
+    align-self: center;
+    font-size: 36px;
+}
+
+.rigthGuess{
+    color: white;
+    background: radial-gradient(#24f39b,#1e7a2f);
+    border-color: #24f39b;
+}
+
+.wrongGuess{
+    color: white;
+    background: radial-gradient(#e81b88,#c91437);
+    border-color: #e81b88;
+}
+
+button{
+    border-radius: 4px;
+    padding:0.5%;
+    font-weight: bold;
+}
+
+.playButtons{
+    color: white;
+    background-color: black;
+    font-family: myFirstFont;
+}
+
+.buttonsContainer{
+    width: 80%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.bc_row{
+    margin-top: 1%;
+}
+
+.letterButton{
+    width: 8%;
+}
+
+#playAgain{
+    margin-top:2%
+}
+
+#resultGif{
+    margin:1%;
+}
+
