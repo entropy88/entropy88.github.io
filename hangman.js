@@ -130,6 +130,8 @@ function reset() {
     for (let i=0; i<letterButtons.length;i++){
         letterButtons[i].disabled=false;
         letterButtons[i].style.backgroundColor='white';
+        letterButtons[i].classList.remove('rigthGuess');
+        letterButtons[i].classList.remove('wrongGuess');
     }
 
     getRandomMaster();
