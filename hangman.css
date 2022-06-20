@@ -51,10 +51,13 @@ button{
 
 .bc_row{
     margin-top: 1%;
+    justify-content: center;
+   
 }
 
 .letterButton{
-    width: 8%;
+    width: 8%;   
+
 }
 
 #playAgain{

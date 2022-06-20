@@ -17,6 +17,11 @@ var sithName = document.getElementById('masterName');
 let letterButtonsElements = document.getElementsByClassName('letterButton');
 let letterButtons = Array.from(letterButtonsElements);
 
+//buttons must be disabled before play button is clicked
+letterButtons.forEach(l=>{
+    l.disabled=true;
+})
+
 
 //attach event listeners to all of them
 letterButtons.forEach(letterButton => letterButton.addEventListener('click', function (e) {
@@ -29,6 +34,10 @@ playBtn.addEventListener('click', function () {
     let name = getRandomMaster();
     displayHiddenName();
     playBtn.style.display='none';
+    //enable buttons
+    letterButtons.forEach(l=>{
+        l.disabled=false;
+    })
 })
 
 let guesses = [];
@@ -41,7 +50,13 @@ let sith_masters = [
     "Githany", "Darth Gorgos", "Grathan", "Dathka Graush", "Darth Gravid","Darth Guile","Darth Hadra",
 "Hezzoran", "Darth Howl", "Xat Hracken", "Darth Ikoral", "Darth Jadus","Skere Kaan","Kas'im","Kherus",
 "Kopecz", "Korek","Darth Krayt","Kreia","Ludo Kressh","Kaox Krul","Exar Kun","Lumiya","Darth Malak",
-"Darth Malgus","Darth Marr","Maul","Darth Mortis","Ruku Myal"]
+"Darth Malgus","Darth Marr","Maul","Darth Mortis","Ruku Myal","Na'daz", "Freedon Nadd","Darth Nihilus", 
+"Darth Nox", "Ommin","Orilltha", "Ajunta Pall", "Darth Plagueis","Praven","Qordis","Renning","Revan",
+"Olaris Rhea","Darth Ruyn","Naga Sadow","Darth Scabrous","Darth Shaa","Shak'Weth","Shenayag","Darth Sidious",
+"Darth Scabrous","Darth Shaa","Shak'Weth","Shenayag","Simus","Darth Skotia","Spindrall","Darth Talon","Tenebrae",
+"Darth Tenebrous","Darth Thanaton","Traan","Tsiat","Jorak Uln","Seviss Vaa","Darth Vectivus","Darth Vengean",
+"Vergere","Jestat Vhool","Darth Vindican","Darth Vowrawn","Uthar Wynn","Darth Wyyrlok","Yuvar Xal","XoXaan",
+"Yakata","Darth Zannah" ]
 
 
 
