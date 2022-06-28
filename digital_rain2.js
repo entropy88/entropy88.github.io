@@ -16,7 +16,7 @@ const draw = () => {
 
     //get random vertical position
     function randomVericalPosition() { // min and max included 
-        return 18 * (Math.floor(Math.random() * (cols + 1);
+        return 18 * (Math.floor(Math.random() * (cols + 1));
     }
 
     for (let k = 0; k < cols; k++) {
