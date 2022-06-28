@@ -5,6 +5,7 @@ container.width = window.innerWidth;
 container.height = window.innerHeight;
 let ctx = container.getContext('2d');
 
+
 let rows = Math.floor(container.height / 18);
 let cols = Math.floor(container.width / 18);
 
@@ -14,9 +15,10 @@ const draw = () => {
     ctx.font = 18 + 'px monospace';
 
 
+
     //get random vertical position
-    function randomVericalPosition() { // min and max included 
-        return 18 * (Math.floor(Math.random() * (cols + 1));
+    function randomVericalPosition() { 
+        return 18 * (Math.floor(Math.random() *cols+1));
     }
 
     for (let k = 0; k < cols; k++) {
@@ -25,6 +27,7 @@ const draw = () => {
             console.log(randomDropIndex);
             ctx.fillText(raindrops[randomDropIndex], k * 18, randomVericalPosition());
             ctx.fillStyle = '#0F0';
+
         }
     }
 }
