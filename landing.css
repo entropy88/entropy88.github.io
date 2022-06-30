@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+ body{
+    margin: 10%;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.title{
+    font-size: 42px;
+    font-weight: bold;
+}
+
+#descriptionDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    margin-left: 0;
+}
+
+ul p{
+    font-weight: bold;
+}
+
+.contact{
+ display: flex;
+justify-content: space-between;
+}
